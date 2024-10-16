@@ -9,7 +9,7 @@ const ejs = require('ejs')
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
-var mongoDatabase = 'mongodb+srv://chousour:Chou2560@nodebackend.rkpyh.mongodb.net/mean?retryWrites=true&w=majority&appName=NodeBackend'
+var mongoDatabase = ''
 
 mongoose.Promise = global.Promise
 
@@ -17,7 +17,7 @@ mongoose.connect(mongoDatabase).then(() => {
     console.log('Database connected')
     },
     err => {
-        console.log('Database could not be connected: ' + err)
+        console.log('Database could not be connected: ' + err)  
     });
 
 const employeeRoute = require('./routes/employee.routes')

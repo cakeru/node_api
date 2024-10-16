@@ -20,7 +20,8 @@ const EmployeeSchema = new Schema({
     {
         type: Number
     },
-},{
+},
+{
         collection: 'employees',
         timestamp: true
 });
